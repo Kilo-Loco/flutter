@@ -1,14 +1,14 @@
 import SwiftUI
 
-typealias Widget = View
+public typealias Widget = View
 
-protocol StatelessWidget: Widget {}
+public protocol StatelessWidget: Widget {}
 
-protocol StatefulWidget: Widget {
+public protocol StatefulWidget: Widget {
     
     associatedtype State: WidgetState
     
     var state: State { get }
 }
 
-protocol WidgetState: ObservableObject {}
+public protocol WidgetState: ObservableObject {}
