@@ -1,4 +1,4 @@
-# [![Flutter logo][]][flutter-dart-swift.png]
+# [<img src="flutter-dart-swift.png" alt="Flutter logo">](https://youtu.be/dQw4w9WgXcQ)
 
 [![Build Status - Cirrus][]][Build status]
 [![Discord badge][]][Discord instructions]
