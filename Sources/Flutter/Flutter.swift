@@ -13,10 +13,17 @@ public protocol StatefulWidget: Widget {
 
 public protocol WidgetState: ObservableObject {}
 
-public typealias ListView = List
+public struct ListView<Content: Widget>: Widget {
+    
+    let content: () -> Content
+    
+    public var body: some View {
+        content()
+    }
+}
 
-public extension ListView where SelectionValue == Int {
-    @inlinable static func builder<Content: Widget>(
+public extension ListView {
+    @inlinable static func builder(
         itemCount: Int,
         @ViewBuilder builder: @escaping (Int) -> Content
     ) -> some Widget {
