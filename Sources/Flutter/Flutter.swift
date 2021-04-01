@@ -41,9 +41,9 @@ public typealias Column = VStack
 
 public typealias Stack = ZStack
 public struct Card<Content: Widget>: Widget {
-    let content: () -> Content
+    public let content: () -> Content
     
-    public init(_ content: @escaping () -> Content) {
+    @inlinable public init(@ViewBuilder _ content: @escaping () -> Content) {
         self.content = content
     }
     
