@@ -1,4 +1,4 @@
-# [![Flutter logo][]][flutter.dev]
+# [![Flutter logo][]][flutter-dart-swift.png]
 
 [![Build Status - Cirrus][]][Build status]
 [![Discord badge][]][Discord instructions]
