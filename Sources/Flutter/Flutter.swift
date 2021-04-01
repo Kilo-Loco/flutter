@@ -15,7 +15,7 @@ public protocol WidgetState: ObservableObject {}
 
 public typealias ListView = List
 
-public extension ListView {
+public extension ListView where SelectionValue == Int {
     @inlinable static func builder<Content: Widget>(
         itemCount: Int,
         @ViewBuilder builder: @escaping (Int) -> Content
