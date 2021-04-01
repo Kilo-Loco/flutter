@@ -57,3 +57,31 @@ public struct Card<Content: Widget>: Widget {
         }
     }
 }
+
+
+public struct ListTile<TitleWidget: Widget, SubtitleWidget: Widget>: Widget {
+    
+    public let title: TitleWidget
+    public let subtitleWidget: SubtitleWidget
+    
+    public init(title: TitleWidget, subtitle: SubtitleWidget) {
+        self.title = title
+        self.subtitleWidget = subtitle
+    }
+    
+    public var body: some View {
+        Card {
+            Row {
+                Column(alignment: .leading) {
+                    title
+                        .font(.body)
+                    subtitleWidget
+                        .font(.callout)
+                }
+                Spacer()
+            }
+            .padding(.horizontal)
+        }
+        .padding(.horizontal)
+    }
+}
