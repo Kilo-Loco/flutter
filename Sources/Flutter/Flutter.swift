@@ -18,7 +18,9 @@ public struct ListView<Content: Widget>: Widget {
     let content: () -> Content
     
     public var body: some View {
-        content()
+        ScrollView {
+            content()
+        }
     }
 }
 
@@ -27,7 +29,9 @@ public extension ListView {
         itemCount: Int,
         @ViewBuilder builder: @escaping (Int) -> Content
     ) -> some Widget {
-        ForEach(0 ..< itemCount, content: builder)
+        ScrollView {
+            ForEach(0 ..< itemCount, content: builder)
+        }
     }
 }
 
@@ -36,3 +40,16 @@ public typealias Row = HStack
 public typealias Column = VStack
 
 public typealias Stack = ZStack
+public struct Card<Content: Widget>: Widget {
+    let content: () -> Content
+    
+    public var body: some View {
+        Stack {
+            Color.white
+                .cornerRadius(2)
+                .shadow(radius: 2)
+            
+            content()
+        }
+    }
+}
