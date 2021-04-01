@@ -1,4 +1,4 @@
-import SwiftUI
+@_exported import SwiftUI
 
 public typealias Widget = View
 
