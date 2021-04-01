@@ -43,6 +43,10 @@ public typealias Stack = ZStack
 public struct Card<Content: Widget>: Widget {
     let content: () -> Content
     
+    public init(_ content: @escaping () -> Content) {
+        self.content = content
+    }
+    
     public var body: some View {
         Stack {
             Color.white
